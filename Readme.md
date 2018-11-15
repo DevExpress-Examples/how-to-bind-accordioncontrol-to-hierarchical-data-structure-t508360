@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainViewModel.cs](./CS/DXSample/ViewModels/MainViewModel.cs) (VB: [MainViewModel.vb](./VB/DXSample/ViewModels/MainViewModel.vb))
+* **[MainView.xaml](./CS/DXSample/Views/MainView.xaml) (VB: [MainView.xaml](./VB/DXSample/Views/MainView.xaml))**
+<!-- default file list end -->
 # How to: Bind AccordionControl to Hierarchical Data Structure
 
 

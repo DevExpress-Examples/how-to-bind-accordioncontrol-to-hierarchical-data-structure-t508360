@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+	<TargetFrameworks>net8.0-windows;net472</TargetFrameworks>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace></RootNamespace>
+    <AssemblyName>DXSample</AssemblyName>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <Platforms>x86;AnyCPU</Platforms>
+    <!--<CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>-->
+    <EnableDefaultApplicationDefinition>false</EnableDefaultApplicationDefinition>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\EmployeesWithPhoto.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Person_Female.png" />
+    <Resource Include="Images\Person_Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Administration.png" />
+    <Resource Include="Images\Inventory.png" />
+    <Resource Include="Images\Manufacturing.png" />
+    <Resource Include="Images\Quality.png" />
+    <Resource Include="Images\Research.png" />
+    <Resource Include="Images\Sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Data" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Data.Desktop" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Mvvm" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Office.Core" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Printing.Core" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.RichEdit.Core" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.RichEdit.Export" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Accordion" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Core" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Wpf.LayoutControl" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Reporting" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Themes.Office2016White" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Themes.All" Version="24.2.*-*" />
+	<Reference Include="System.Web" Condition="$(TargetFramework) == 'net472'" />
+  </ItemGroup>
+</Project>

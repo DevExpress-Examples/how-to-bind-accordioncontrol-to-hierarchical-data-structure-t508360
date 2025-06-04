@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
-	<TargetFrameworks>net8.0-windows;net472</TargetFrameworks>
+    <TargetFrameworks>net8.0-windows;net472</TargetFrameworks>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>WinExe</OutputType>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <AssemblyName>DXSample</AssemblyName>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
@@ -55,6 +56,6 @@
     <PackageReference Include="DevExpress.Wpf.Reporting" Version="24.2.*-*" />
     <PackageReference Include="DevExpress.Wpf.Themes.Office2016White" Version="24.2.*-*" />
     <PackageReference Include="DevExpress.Wpf.Themes.All" Version="24.2.*-*" />
-	<Reference Include="System.Web" Condition="$(TargetFramework) == 'net472'" />
+    <Reference Include="System.Web" Condition="$(TargetFramework) == 'net472'" />
   </ItemGroup>
 </Project>

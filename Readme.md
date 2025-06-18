@@ -7,11 +7,49 @@
 
 # WPF Accordion Control - Bind to Hierarchical Data Structure
 
-This example binds <a href="https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control">Accordion Control</a> to Hierarchical Data Structure.
+This example binds [Accordion Control](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control) to hierarchical data structure.
 
 ## Implementation Details
 
-...
+To display hierarchical data in the [AccordionControl](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control), bind the `ItemsSource` property to a collection that contains child items. Use the [ChildrenPath](https://docs.devexpress.com/WPF/DevExpress.Xpf.Accordion.AccordionControl.ChildrenPath) property to specify the name of the child collection.
+
+In this example, the [AccordionControl](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control) is bound to the collection of departments. Each department contains the collection of employees:
+
+```xaml
+<dxa:AccordionControl
+    ItemsSource="{Binding Departments}"
+    ChildrenPath="Employees"
+    SelectedItem="{Binding SelectedEmployee, Mode=TwoWay}"
+    SelectionUnit="SubItem" />
+```
+
+The `MainViewModel` exposes two bindable properties:
+
+`Departments` – the collection of `EmployeeDepartment` objects grouped by department name.
+
+`SelectedEmployee` – the employee selected in the [AccordionControl](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control).
+
+At runtime, the view model loads employee data, groups it by department, and assigns the first available employee to the `SelectedEmployee` property:
+
+```csharp
+var departments = DataHelper.GetEmployees()
+    .GroupBy(x => x.GroupName)
+    .Select(x => CreateEmployeeDepartment(x.Key, x.Take(10).ToArray()))
+    .ToArray();
+
+Departments = new ObservableCollection<EmployeeDepartment>(departments);
+SelectedEmployee = Departments[0].Employees[0];
+```
+
+Each `EmployeeDepartment` object includes an `Employees` collection:
+
+
+```csharp
+public class EmployeeDepartment {
+    public string Name { get; set; }
+    public ObservableCollection<Employee> Employees { get; set; }
+}
+```
 
 ## Files to Review
 

@@ -7,13 +7,13 @@
 
 # WPF Accordion Control - Bind to Hierarchical Data Structure
 
-This example binds [Accordion Control](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control) to hierarchical data structure.
+This example binds [Accordion Control](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control) to a hierarchical data structure.
 
 ## Implementation Details
 
-To display hierarchical data in the [AccordionControl](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control), bind the `ItemsSource` property to a collection that contains child items. Use the [ChildrenPath](https://docs.devexpress.com/WPF/DevExpress.Xpf.Accordion.AccordionControl.ChildrenPath) property to specify the name of the child collection.
+To display hierarchical data in the [Accordion Control](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control), bind the `ItemsSource` property to a collection populated with child items. Use the [ChildrenPath](https://docs.devexpress.com/WPF/DevExpress.Xpf.Accordion.AccordionControl.ChildrenPath) property to specify the name of the collection.
 
-In this example, the [AccordionControl](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control) is bound to the collection of departments. Each department contains the collection of employees:
+In this example, the [Accordion Control](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control) is bound to a collection of departments. Each department contains a collection of employees:
 
 ```xaml
 <dxa:AccordionControl
@@ -23,13 +23,13 @@ In this example, the [AccordionControl](https://docs.devexpress.com/WPF/118347/c
     SelectionUnit="SubItem" />
 ```
 
-The `MainViewModel` exposes two bindable properties:
+`MainViewModel` exposes two bindable properties:
 
-`Departments` – the collection of `EmployeeDepartment` objects grouped by department name.
+`Departments` – a collection of `EmployeeDepartment` objects grouped by department names.
 
-`SelectedEmployee` – the employee selected in the [AccordionControl](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control).
+`SelectedEmployee` – the employee selected in the [Accordion Control](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control).
 
-At runtime, the view model loads employee data, groups it by department, and assigns the first available employee to the `SelectedEmployee` property:
+At runtime, the view model loads employee data, groups it by departments, and assigns the first available employee to the `SelectedEmployee` property:
 
 ```csharp
 var departments = DataHelper.GetEmployees()

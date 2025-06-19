@@ -29,7 +29,7 @@ In this example, the [Accordion Control](https://docs.devexpress.com/WPF/118347/
 
 `SelectedEmployee` – the employee selected in the [Accordion Control](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control).
 
-At runtime, the view model loads employee data, groups it by departments, and assigns the first available employee to the `SelectedEmployee` property:
+At runtime, the view model loads employee data, groups it by department, and assigns the first available employee to the `SelectedEmployee` property:
 
 ```csharp
 var departments = DataHelper.GetEmployees()

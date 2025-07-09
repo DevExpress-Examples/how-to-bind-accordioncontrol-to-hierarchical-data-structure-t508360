@@ -7,13 +7,13 @@
 
 # WPF Accordion Control - Bind to Hierarchical Data Structure
 
-This example binds [Accordion Control](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control) to a hierarchical data structure.
+This example binds our WPF [Accordion Control](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control) to a hierarchical data structure. 
 
 ## Implementation Details
 
-To display hierarchical data in the [Accordion Control](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control), bind the `ItemsSource` property to a collection populated with child items. Use the [ChildrenPath](https://docs.devexpress.com/WPF/DevExpress.Xpf.Accordion.AccordionControl.ChildrenPath) property to specify the name of the collection.
+To display hierarchical data within the DevExpress WPF [Accordion Control](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control), bind the `ItemsSource` property to a collection populated with child items. Use the [ChildrenPath](https://docs.devexpress.com/WPF/DevExpress.Xpf.Accordion.AccordionControl.ChildrenPath) property to specify collection name. 
 
-In this example, the [Accordion Control](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control) is bound to a collection of departments. Each department contains a collection of employees:
+In this example, the [Accordion Control](https://docs.devexpress.com/WPF/118347/controls-and-libraries/navigation-controls/accordion-control) is bound to a collection of "departments". Each department contains a collection of employees: 
 
 ```xaml
 <dxa:AccordionControl

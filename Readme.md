@@ -19,7 +19,7 @@ This example demonstrates how to bind <a href="https://documentation.devexpress.
 
 
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=how-to-bind-accordioncontrol-to-hierarchical-data-structure-t508360&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=how-to-bind-accordioncontrol-to-hierarchical-data-structure-t508360&~~~was_helpful=no)
 
